@@ -1,4 +1,4 @@
-import Data from './api/air';
+import Data from './api/Data';
 import './App.css';
 
 function App() {
