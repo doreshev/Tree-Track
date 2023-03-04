@@ -14,6 +14,7 @@ function Data() {
         try {
             const response = await axios.get(baseurl + city);
             const allData = response.data[0];
+            console.log(allData);
             setData(allData);
         }
         catch(error) {
