@@ -1,46 +1,31 @@
 import React, { useEffect, useState } from "react";
-
-// const URL = "https://httpbin.org/get"
+import axios from "axios";
 
 function Data() {
+    const [data, getData] = useState([]);
+    const city = '13.4050,52.5200';
+    const baseurl = 'https://api.v2.emissions-api.org/api/v2/carbonmonoxide/statistics.json?interval=day&begin=2019-02-01&end=2019-02-02&point=';
 
-    // const URL = 'https://www.umweltbundesamt.de/api/air_data/v2/component/json'
-    const URL = "https://httpbin.org/get"
-    const [data, setData] = useState([]);
 
     useEffect(() => {
-        async function getData() {
-            try {
-                const response = await fetch(URL);
-                if (!response.ok) {
-                    throw new Error(
-                      `This is an HTTP error: The status is ${response.status}`
-                    );
-                }
-                let result = await response.json();
-                console.log(result);
-                setData(result);
-            } 
-            catch(err) {
-                setData(null);
-            }
-        };
-        getData();
+        getAllData();
     }, []);
 
+    const getAllData = () => {
+        axios.get(baseurl + city)
+        .then((response) => {
+            const allData = response.data[0].value;
+            getData(allData);
+        })
+        .catch(error => console.error('Error: ', error));
+    }
     return (
-        <div className="Data">
-          <h1>API Posts</h1>
-          <ul>
-            {data &&
-              data.map(({ origin, url }) => (
-                <li key={origin}>
-                  <h3>{url}</h3>
-                </li>
-              ))}
-          </ul>
+        <div>
+            <h1>My Data</h1>
+            <p>Average: {data.average}</p>
+            <p>Count: {data.count}</p>
         </div>
-      );
+    );
 }
 
 export default Data;
