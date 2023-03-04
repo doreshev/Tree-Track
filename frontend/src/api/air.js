@@ -14,7 +14,8 @@ function Data() {
     const getAllData = () => {
         axios.get(baseurl + city)
         .then((response) => {
-            const allData = response.data[0].value;
+            const allData = response.data[0];
+            console.log(response);
             getData(allData);
         })
         .catch(error => console.error('Error: ', error));
@@ -22,8 +23,8 @@ function Data() {
     return (
         <div>
             <h1>My Data</h1>
-            <p>Average: {data.average}</p>
-            <p>Count: {data.count}</p>
+            <p>Average: {data.value.average}</p>
+            <p>Count: {data.value.count}</p>
         </div>
     );
 }
