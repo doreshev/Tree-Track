@@ -24,6 +24,121 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+	<link rel="stylesheet" href="./Copernicus Sentinel-5P Mapping Portal_files/leaflet.css">
+	<link rel="stylesheet" href="./Copernicus Sentinel-5P Mapping Portal_files/leaflet-search.min.css">
+	<link rel="stylesheet" href="./Copernicus Sentinel-5P Mapping Portal_files/materialdesignicons.min.css">
+	<style>
+		#map {
+		  width: 100%;
+		  padding-top: 50%;
+		  margin-top: 15px;
+		}
+		.controls {
+		  width: 100%;
+		  display: flex;
+		  margin: auto;
+		  flex-wrap: wrap;
+		}
+		.buttonctl-right {
+		  white-space: nowrap;
+		  margin: 10px;
+		  margin-bottom: 15px;
+		  float: right;
+		}
+		.buttonctl-left {
+		  white-space: nowrap;
+		  margin: 10px;
+		  margin-bottom: 15px;
+		  float: left;
+		}
+		.navigationctl {
+		  width: 272px;
+		  margin: auto;
+		  white-space: nowrap;
+		  margin-top: 10px;
+		  margin-bottom: 15px;
+		}
+		.btn {
+		  color: #212529;
+		  background-color: #f8f9fa;
+		  border-color: #f8f9fa;
+		  border: 1px solid #ced4da;
+		  padding: .375rem .6rem;
+		  font-size: 0.9rem;
+		  line-height: 1;
+		  border-radius: .25rem;
+		  display: inline-block;
+		  font-weight: 400;
+		  text-align: center;
+		  vertical-align: middle;
+		  margin: -1px;
+		  margin-bottom: 5px;
+		}
+		.btn-align-left {
+		  border-top-left-radius: 0;
+		  border-bottom-left-radius: 0;
+		}
+		.btn-align-right {
+		  border-top-right-radius: 0;
+		  border-bottom-right-radius: 0;
+		}
+		.btn:enabled:focus, .btn:enabled:hover, a.btn:hover {
+		  text-decoration: none;
+		  color: #212529;
+		  background-color: #e2e6ea;
+		  border-color: #dae0e5;
+		  outline: none;
+		}
+		.nav-ref {
+		  width: 220px;
+		  font-weight: bold;
+		}
+		.range-select {
+		  -webkit-appearance: none;
+		  -moz-appearance: none;
+		  appearance: none;
+		  text-align-last: center;
+		}
+		.mapctl {
+		  padding: 2px 10px 2px 10px;
+		  background: white;
+		  background: rgba(255,255,255,0.9);
+		  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+		  border-radius: 5px;
+		  text-align: right;
+		}
+		.maptitle {
+		  font-size: 24px;
+		  font-weight: bold;
+		  white-space: nowrap;
+		}
+		.leaflet-container .leaflet-control-attribution {
+		  font-size: 16px;
+		}
+		.colorbar {
+		  width: 300px;
+		  height: auto;
+		}
+		@media screen and (max-width:1407px) {
+		  .maptitle {
+			font-size: 1.5vw;
+		  }
+		  .leaflet-container .leaflet-control-attribution {
+			font-size: 1vw;
+		  }
+		  .colorbar {
+			width: 20vw;
+		  }
+		}
+		#toggle-content {
+		  display: none;
+		}
+		/* https://github.com/Leaflet/Leaflet/issues/3575#issuecomment-688644225 */
+		.leaflet-tile-container img {
+			width: 256.5px !important;
+			height: 256.5px !important;
+		}
+	  </style>
     <title>React App</title>
   </head>
   <body>
