@@ -91,4 +91,67 @@ footer
 	color: red;
 }
 
+.container {
+    display: flex;
+    justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.item{
+	font-family: roundsblack;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 50%;
+	border-width: 10px 5px;
+	border-top-width: 0px;
+	align-self: center;
 
+}
+.image{
+	height: 400px;
+	max-width: 100%;
+	opacity: 1;
+	display: block;
+	width: 100%;
+	height: fit-content;
+	transition: .5s ease;
+	backface-visibility: hidden;
+}
+
+.imageContainer:hover .image {
+	opacity: 0.3;
+  }
+
+.middle {
+	transition: .5s ease;
+	opacity: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	text-align: center;
+	height: inherit;
+  }
+
+.text {
+	background-color: #5f7878; 
+	color: #F1B351;
+	font-size: 16px;
+	padding: 16px 32px;
+  }
+
+  .imageContainer {
+
+	display: flex;
+	
+	position: relative;
+	/* width: 50%; */
+  }
+  
+
+  .imageContainer:hover .middle {
+	opacity: 1;
+  }
+  

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="icon" href="favicon.ico" />
 	<link rel="stylesheet" href="styles.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
@@ -10,7 +10,6 @@
       name="description"
       content="Web site created using create-react-app"
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -24,6 +23,7 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+<<<<<<< HEAD
 	<link rel="stylesheet" href="./Copernicus Sentinel-5P Mapping Portal_files/leaflet.css">
 	<link rel="stylesheet" href="./Copernicus Sentinel-5P Mapping Portal_files/leaflet-search.min.css">
 	<link rel="stylesheet" href="./Copernicus Sentinel-5P Mapping Portal_files/materialdesignicons.min.css">
@@ -140,6 +140,9 @@
 		}
 	  </style>
     <title>React App</title>
+=======
+    <title>Tree Track</title>
+>>>>>>> db1bdcd937652a91322b0a78e7427e2101f56734
   </head>
   <body>
 	  <header class="header">
@@ -154,30 +157,49 @@
 	  <noscript>You need to enable JavaScript to run this app.</noscript>
 	  
     <div id="root" class="root"></div>
+	<div class="countdown">What can we do?</div>
+	<div class="countdown">What can we do?</div>
+	<div class="container">
+		<div class="item imageContainer"><p class="title">Learn</p>
+			<a class="link" href="https://data.worldbank.org/indicator/EN.ATM.CO2E.KT?end=2019&locations=DE&start=1990&view=chart">
+				<img class="image" src="images/graph1.png" alt="alt">
+				<div class="middle">
+					<div class="text">Learn More</div>
+				  </div></a>
+		</div>
+		<div class="item imageContainer title"><p class="title">Study</p>
+			<a class="link" href="https://www.eea.europa.eu/data-and-maps/data/data-viewers/greenhouse-gases-viewer">
+				<img class="image" src="images/graph2.png" alt="alt"><div class="middle">
+					<div class="text">Learn More</div>
+				  </div></a>
+				
+				</div>
+	</div>
 	<div id="demo" class="countdown"></div>
-	<div id="bottom" class="countdown bottom">Trees left until<b class="blood">WE ALL DIE!</b></div>
+	<div id="bottom" class="countdown bottom">Time left <b class="blood">TO MAKE A DIFFERENCE!</b></div>
 
 	<script>
 		// Set the date we're counting from
-		var countDownNumber = 1233;
-		var now = 0;
+		var countDownDate = new Date().getTime() + (1000 * 60 * 60 * 24);
 		// Update the count down every 1 second
 		var x = setInterval(function() {
 
-			
-		// change the counter
-		var res = countDownNumber - now;
-		// increase counter
-		now += 1;
+		var now1 = new Date().getTime();
 
-
-		
+		// Time calculations for days, hours, minutes and seconds
+		var distance = countDownDate - now1;
+		var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+		var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+		var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
 		// Display the result in the element with id="demo"
-		document.getElementById("demo").innerHTML = res;
+		// document.getElementById("demo").innerHTML = res;
+		document.getElementById("demo").innerHTML = hours + "h "
+		+ minutes + "m " + seconds + "s ";
 
 		// If the count down is finished, write some text
-		if (res < 0) {
+		if (distance < 0) {
 			clearInterval(x);
 			document.getElementById("demo").innerHTML = "You died!";
 			document.getElementById("bottom").classList.add("hidden");
