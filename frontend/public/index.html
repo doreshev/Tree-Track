@@ -40,26 +40,27 @@
 	  
     <div id="root" class="root"></div>
 	<div id="demo" class="countdown"></div>
-	<div id="bottom" class="countdown bottom">Trees left until<b class="blood">WE ALL DIE!</b></div>
+	<div id="bottom" class="countdown bottom">Time left <b class="blood">TO MAKE A DIFFERENCE!</b></div>
 
 	<script>
 		// Set the date we're counting from
-		var countDownNumber = 1233;
-		var now = 0;
+		var countDownDate = new Date().getTime() + (1000 * 60 * 60 * 24);
 		// Update the count down every 1 second
 		var x = setInterval(function() {
 
-			
-		// change the counter
-		var res = countDownNumber - now;
-		// increase counter
-		now += 1;
+		var now1 = new Date().getTime();
 
-
-		
+		// Time calculations for days, hours, minutes and seconds
+		var distance = countDownDate - now1;
+		var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+		var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+		var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
 		// Display the result in the element with id="demo"
-		document.getElementById("demo").innerHTML = res;
+		// document.getElementById("demo").innerHTML = res;
+		document.getElementById("demo").innerHTML = hours + "h "
+		+ minutes + "m " + seconds + "s ";
 
 		// If the count down is finished, write some text
 		if (res < 0) {
