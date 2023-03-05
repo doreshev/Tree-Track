@@ -1,0 +1,94 @@
+
+@font-face 
+{
+	font-family: Bangers;
+	src: url(fonts/Bangers-Regular.ttf);
+}
+@font-face 
+{
+	font-family: roundsblack;
+	src: url(fonts/RoundsBlack.otf);
+}
+
+.logo{
+    margin: 0 10px;
+}
+.logo img{
+    height: 180px;
+}
+
+.title{
+    justify-self: center;
+    align-self: center;
+    font-size: 30px;
+    color: #F1B351;
+    margin: 0 20px;
+}
+
+body
+{
+	font-family: "Montserrat", sans-serif;
+	-webkit-text-size-adjust: 100%;
+	background: #3C6060; 
+	margin: 0;
+}
+
+header
+{
+	display: flex;
+    align-items: stretch;
+    justify-content: space-evenly;
+    color: white;
+    min-height: 70px;
+    border-bottom: solid 3px #F1B351;
+}
+
+.root
+{
+	background: white; 
+	min-height: 600px;
+	min-width: 200px;
+}
+
+.countdown
+{
+	display: flex;
+	background: white; 
+	min-height: 100px;
+	min-width: 500px;
+	color: #3C6060; 
+	align-items: center;
+	justify-content: center;
+	font-family: roundsblack;
+	/* font-weight: bolder; */
+	font-size: 80px;
+}
+
+.bottom
+{
+	color: #5f7878; 
+	font-size: 60px;
+	padding-bottom: 50px;
+}
+
+footer
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #F1B351;
+	min-height: 70px;
+}
+
+.hidden
+{
+	display: none;
+}
+
+.blood
+{
+	padding-left: 10px;
+	color: red;
+}
+
+

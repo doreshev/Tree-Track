@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+	<link rel="stylesheet" href="styles.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
@@ -25,12 +26,47 @@
     -->
     <title>React App</title>
   </head>
-  <header class="header">
-    Tree Track
-    </header>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+	  <header class="header">
+		<div class="logo">
+				<img src="images/Tree_track.png" alt="alt">
+		</div>
+		<a class="hidden" href="https://www.vecteezy.com/free-vector/nature">Nature Vectors by Vecteezy</a>
+		<div class="title">
+			WE CARE WHAT WE BREATHE!
+		</div>
+		</header>
+	  <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root" class="root"></div>
+	<div id="demo" class="countdown"></div>
+	<div class="countdown bottom">Trees left until<b class="blood">WE ALL DIE!</b></div>
+
+	<script>
+		// Set the date we're counting from
+		var countDownNumber = 12123;
+		var now = 0;
+		// Update the count down every 1 second
+		var x = setInterval(function() {
+
+			
+		// change the counter
+		var res = countDownNumber - now;
+		// increase counter
+		now += 1;
+
+
+		
+
+		// Display the result in the element with id="demo"
+		document.getElementById("demo").innerHTML = res;
+
+		// If the count down is finished, write some text
+		if (res < 0) {
+			clearInterval(x);
+			document.getElementById("demo").innerHTML = "We won life!";
+		}
+		}, 1000);
+	</script>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -41,8 +77,8 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+	<footer>
+	  Footer
+	  </footer>
   </body>
-  <footer>
-    Footer
-    </footer>
 </html>
