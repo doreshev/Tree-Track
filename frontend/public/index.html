@@ -23,126 +23,7 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-<<<<<<< HEAD
-	<link rel="stylesheet" href="./Copernicus Sentinel-5P Mapping Portal_files/leaflet.css">
-	<link rel="stylesheet" href="./Copernicus Sentinel-5P Mapping Portal_files/leaflet-search.min.css">
-	<link rel="stylesheet" href="./Copernicus Sentinel-5P Mapping Portal_files/materialdesignicons.min.css">
-	<style>
-		#map {
-		  width: 100%;
-		  padding-top: 50%;
-		  margin-top: 15px;
-		}
-		.controls {
-		  width: 100%;
-		  display: flex;
-		  margin: auto;
-		  flex-wrap: wrap;
-		}
-		.buttonctl-right {
-		  white-space: nowrap;
-		  margin: 10px;
-		  margin-bottom: 15px;
-		  float: right;
-		}
-		.buttonctl-left {
-		  white-space: nowrap;
-		  margin: 10px;
-		  margin-bottom: 15px;
-		  float: left;
-		}
-		.navigationctl {
-		  width: 272px;
-		  margin: auto;
-		  white-space: nowrap;
-		  margin-top: 10px;
-		  margin-bottom: 15px;
-		}
-		.btn {
-		  color: #212529;
-		  background-color: #f8f9fa;
-		  border-color: #f8f9fa;
-		  border: 1px solid #ced4da;
-		  padding: .375rem .6rem;
-		  font-size: 0.9rem;
-		  line-height: 1;
-		  border-radius: .25rem;
-		  display: inline-block;
-		  font-weight: 400;
-		  text-align: center;
-		  vertical-align: middle;
-		  margin: -1px;
-		  margin-bottom: 5px;
-		}
-		.btn-align-left {
-		  border-top-left-radius: 0;
-		  border-bottom-left-radius: 0;
-		}
-		.btn-align-right {
-		  border-top-right-radius: 0;
-		  border-bottom-right-radius: 0;
-		}
-		.btn:enabled:focus, .btn:enabled:hover, a.btn:hover {
-		  text-decoration: none;
-		  color: #212529;
-		  background-color: #e2e6ea;
-		  border-color: #dae0e5;
-		  outline: none;
-		}
-		.nav-ref {
-		  width: 220px;
-		  font-weight: bold;
-		}
-		.range-select {
-		  -webkit-appearance: none;
-		  -moz-appearance: none;
-		  appearance: none;
-		  text-align-last: center;
-		}
-		.mapctl {
-		  padding: 2px 10px 2px 10px;
-		  background: white;
-		  background: rgba(255,255,255,0.9);
-		  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-		  border-radius: 5px;
-		  text-align: right;
-		}
-		.maptitle {
-		  font-size: 24px;
-		  font-weight: bold;
-		  white-space: nowrap;
-		}
-		.leaflet-container .leaflet-control-attribution {
-		  font-size: 16px;
-		}
-		.colorbar {
-		  width: 300px;
-		  height: auto;
-		}
-		@media screen and (max-width:1407px) {
-		  .maptitle {
-			font-size: 1.5vw;
-		  }
-		  .leaflet-container .leaflet-control-attribution {
-			font-size: 1vw;
-		  }
-		  .colorbar {
-			width: 20vw;
-		  }
-		}
-		#toggle-content {
-		  display: none;
-		}
-		/* https://github.com/Leaflet/Leaflet/issues/3575#issuecomment-688644225 */
-		.leaflet-tile-container img {
-			width: 256.5px !important;
-			height: 256.5px !important;
-		}
-	  </style>
-    <title>React App</title>
-=======
     <title>Tree Track</title>
->>>>>>> db1bdcd937652a91322b0a78e7427e2101f56734
   </head>
   <body>
 	  <header class="header">
@@ -156,34 +37,41 @@
 		</header>
 	  <noscript>You need to enable JavaScript to run this app.</noscript>
 	  
-    <div id="root" class="root"></div>
-	<div class="countdown">What can we do?</div>
-	<div class="countdown">What can we do?</div>
-	<div class="container">
-		<div class="item imageContainer"><p class="title">Learn</p>
+	  <div class="text_intro">Caring about the environment is crucial for the survival and well-being of both humans and the natural world around us. The environment provides us with essential resources such as clean air, water, and food, and supports the world's biodiversity. However, human activities such as pollution and deforestation are threatening the environment and its resources. Caring about the environment means taking action to protect it, to ensure that future generations can also benefit from its resources. It is our responsibility to care about the environment and to take steps to mitigate the damage we have already caused.</div>
+	  <div class="countdown">What can we do?</div>
+	  <div class="container">
+		  <div class="item imageContainer"><p class="title">Learn</p>
 			<a class="link" href="https://data.worldbank.org/indicator/EN.ATM.CO2E.KT?end=2019&locations=DE&start=1990&view=chart">
 				<img class="image" src="images/graph1.png" alt="alt">
 				<div class="middle">
 					<div class="text">Learn More</div>
-				  </div></a>
-		</div>
-		<div class="item imageContainer title"><p class="title">Study</p>
-			<a class="link" href="https://www.eea.europa.eu/data-and-maps/data/data-viewers/greenhouse-gases-viewer">
-				<img class="image" src="images/graph2.png" alt="alt"><div class="middle">
-					<div class="text">Learn More</div>
-				  </div></a>
-				
+				</div></a>
+			</div>
+			<div class="item imageContainer title"><p class="title">Study</p>
+				<a class="link" href="https://www.eea.europa.eu/data-and-maps/data/data-viewers/greenhouse-gases-viewer">
+					<img class="image" src="images/graph2.png" alt="alt"><div class="middle">
+						<div class="text">Learn More</div>
+					</div></a>
+					
 				</div>
-	</div>
-	<div id="demo" class="countdown"></div>
-	<div id="bottom" class="countdown bottom">Time left <b class="blood">TO MAKE A DIFFERENCE!</b></div>
-
-	<script>
-		// Set the date we're counting from
-		var countDownDate = new Date().getTime() + (1000 * 60 * 60 * 24);
-		// Update the count down every 1 second
-		var x = setInterval(function() {
-
+				<div class="item imageContainer title"><p class="title">Inspect</p>
+					<a class="link" href="https://maps.s5p-pal.com/co/">
+						<img class="image" src="images/coMap.png" alt="alt"><div class="middle">
+							<div class="text">Learn More</div>
+						</div></a>
+						
+					</div>
+				</div>
+				<div id="root" class="root"></div>
+				<div id="demo" class="countdown"></div>
+				<div id="bottom" class="countdown bottom">Time left <b class="blood">TO MAKE A DIFFERENCE!</b></div>
+				
+				<script>
+					// Set the date we're counting from
+					var countDownDate = new Date().getTime() + (1000 * 60 * 60 * 24);
+					// Update the count down every 1 second
+					var x = setInterval(function() {
+						
 		var now1 = new Date().getTime();
 
 		// Time calculations for days, hours, minutes and seconds

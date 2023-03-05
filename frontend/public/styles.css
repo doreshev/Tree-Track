@@ -141,6 +141,13 @@ footer
 	font-size: 16px;
 	padding: 16px 32px;
   }
+.text_intro {
+	background-color: #5f7878; 
+	color: white;
+	font-size: 16px;
+	padding: 16px 32px;
+	font-family: roundsblack;
+  }
 
   .imageContainer {
 
