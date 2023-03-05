@@ -30,7 +30,7 @@ function Data() {
     return (
         <div>
             <div>
-                <h1>My Data</h1>
+                <h1>Corbonate Emission Chart</h1>
                 {data && <Chart type='bar' data={createChart(data)} />}
             </div>
             <div>
