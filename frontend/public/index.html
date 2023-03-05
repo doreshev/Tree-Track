@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="icon" href="favicon.ico" />
 	<link rel="stylesheet" href="styles.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
@@ -63,7 +63,7 @@
 		+ minutes + "m " + seconds + "s ";
 
 		// If the count down is finished, write some text
-		if (res < 0) {
+		if (distance < 0) {
 			clearInterval(x);
 			document.getElementById("demo").innerHTML = "You died!";
 			document.getElementById("bottom").classList.add("hidden");
