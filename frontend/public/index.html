@@ -37,13 +37,14 @@
 		</div>
 		</header>
 	  <noscript>You need to enable JavaScript to run this app.</noscript>
+	  
     <div id="root" class="root"></div>
 	<div id="demo" class="countdown"></div>
-	<div class="countdown bottom">Trees left until<b class="blood">WE ALL DIE!</b></div>
+	<div id="bottom" class="countdown bottom">Trees left until<b class="blood">WE ALL DIE!</b></div>
 
 	<script>
 		// Set the date we're counting from
-		var countDownNumber = 12123;
+		var countDownNumber = 1233;
 		var now = 0;
 		// Update the count down every 1 second
 		var x = setInterval(function() {
@@ -63,7 +64,8 @@
 		// If the count down is finished, write some text
 		if (res < 0) {
 			clearInterval(x);
-			document.getElementById("demo").innerHTML = "We won life!";
+			document.getElementById("demo").innerHTML = "You died!";
+			document.getElementById("bottom").classList.add("hidden");
 		}
 		}, 1000);
 	</script>
