@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-function Data() {
+function Data(url) {
     const [data, setData] = useState(null);
-    const city = '13.4050,52.5200';
-    const baseurl = 'https://api.v2.emissions-api.org/api/v2/carbonmonoxide/statistics.json?interval=day&begin=2019-02-01&end=2019-02-02&point=';
 
     useEffect(() => {
         getAllData();
@@ -12,7 +10,7 @@ function Data() {
 
     const getAllData = async () => {
         try {
-            const response = await axios.get(baseurl + city);
+            const response = await axios.get(url);
             const allData = response.data[0];
             console.log(allData);
             setData(allData);
